@@ -9,3 +9,6 @@ Version: 1.0.0
 
 Version: 1.0.1
 - Minor fix
+
+Version 1.0.2
+- Icons included

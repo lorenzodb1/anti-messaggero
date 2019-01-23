@@ -1,9 +1,15 @@
 {
   "manifest_version": 2,
   "name": "Anti-Messaggero",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automatically remove the overlay that blocks a user from reading an article.",
   "homepage_url": "https://github.com/lorenzodb1/anti-messaggero",
+  "icons": {
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "192": "icons/icon-192.png"
+  },
   "content_scripts": [
     {
       "matches": ["*://*.ilmessaggero.it/*/*"],
