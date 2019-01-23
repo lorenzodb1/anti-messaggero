@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Anti-Messaggero",
-  "version": "1.0",
-  "description": "Quickly removes the overlay that covers an article.",
+  "version": "1.0.1",
+  "description": "Automatically remove the overlay that blocks a user from reading an article.",
   "homepage_url": "https://github.com/lorenzodb1/anti-messaggero",
   "content_scripts": [
     {
