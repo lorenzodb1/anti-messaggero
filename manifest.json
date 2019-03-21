@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Anti-Messaggero",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automatically remove the overlay that blocks a user from reading an article.",
   "homepage_url": "https://github.com/lorenzodb1/anti-messaggero",
   "icons": {
@@ -15,7 +15,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.ilmessaggero.it/*/*"],
-      "js": ["antimessaggero.js"]
+      "js": ["jquery-3.2.1.min.js","antimessaggero.js"]
     }
   ]
 }
