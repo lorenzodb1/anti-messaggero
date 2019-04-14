@@ -3,24 +3,32 @@ setTimeout(function () {
         document.addEventListener("DOMContentLoaded", unlockArticle);
     } else {
         unlockArticle();
+        closeVideoPopUp();
     }
-}, 10);
-
-closeVideoPopUp();
+}, 100);
 
 function unlockArticle () {
-    let layoverElement = document.body.getElementsByClassName("modal")[0];
-    if (layoverElement.length !== 0) layoverElement.remove();
     document.body.style.overflow = "scroll";
+    let layoverElement = document.body.getElementsByClassName("modal");
+    if (layoverElement.length > 0) {
+        layoverElement[0].remove();
+    } else {
+        let paywallStripe = $('#paywall_strip');
+        if (paywallStripe.length > 0) {
+            paywallStripe[0].remove();
+        } else {
+            setTimeout(unlockArticle, 100);
+        }
+    }
 }
 
 function closeVideoPopUp () {
-    let popUpVideo = $('.floatingVideo')[0];
+    let popUpVideo = $('.floatingVideo');
     setTimeout(function () {
-        if (!popUpVideo) {
-            closeVideoPopUp()
+        if (popUpVideo.length > 0) {
+            popUpVideo[0].click();
         } else {
-            popUpVideo.click();
+            closeVideoPopUp()
         }
     }, 100);
 }
