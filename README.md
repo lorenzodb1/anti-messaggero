@@ -27,3 +27,6 @@ Version 1.0.3
 Version 1.0.6
 - Re-introduced functionalities from versions 1.0.4 and 1.0.5, which have been disabled by Mozilla due to an issue with the jQuery source code discovered during the review process;
 - Updated jQuery to version 3.4.1.
+
+Version 1.1.0
+- Added support for mobile.
