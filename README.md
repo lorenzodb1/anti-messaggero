@@ -1,7 +1,8 @@
-# [Anti-Messaggero](https://addons.mozilla.org/en-US/firefox/addon/anti-messaggero/)
-##### A Firefox add-on to automatically remove the overlay that blocks a user from reading an article.
+# Anti-Messaggero
+[![Mozilla Add-on](https://img.shields.io/amo/v/anti-messaggero)](https://addons.mozilla.org/en-US/firefox/addon/anti-messaggero/) ![Mozilla Add-on](https://img.shields.io/amo/users/anti-messaggero)
+##### A Firefox add-on to automatically remove the overlay that blocks a user from reading an article, both on web and on mobile.
 
-This add-on was built for educational purpose. Please support Il Messaggero (www.ilmessaggero.it) by buying their subscription.
+This add-on was built for educational purpose. Please support [_Il Messaggero_](www.ilmessaggero.it) by buying their subscription.
 
 Version 1.0.0
 - Added functionality to remove the overlay that covers the article;
@@ -25,8 +26,11 @@ Version 1.0.3
 - Added functionality to remove a paywall stripe that appears when the free articles limit hasn't been reached yet.
 
 Version 1.0.6
-- Re-introduced functionalities from versions 1.0.4 and 1.0.5, which have been disabled by Mozilla due to an issue with the jQuery source code discovered during the review process;
+- Re-introduced functionalities from versions 1.0.4 and 1.0.5, which have been disabled by Mozilla due to an issue with the jQuery source code checksum discovered during the review process;
 - Updated jQuery to version 3.4.1.
 
 Version 1.1.0
 - Added support for mobile.
+
+Version 1.1.1
+- Fixed issue on mobile caused by a strange behaviour of the website that affected readability of the article.

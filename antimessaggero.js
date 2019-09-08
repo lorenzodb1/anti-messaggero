@@ -8,18 +8,24 @@ setTimeout(function () {
 }, 100);
 
 function unlockArticle () {
-    document.body.style.overflow = "scroll";
-    let layoverElement = document.body.getElementsByClassName("modal");
-    if (layoverElement.length > 0) {
-        layoverElement[0].remove();
-    } else {
-        let paywallStripe = $('#paywall_strip');
-        if (paywallStripe.length > 0) {
-            paywallStripe[0].remove();
+    setTimeout(function () {
+        document.body.style.overflow = "scroll";
+        let layoverElement = document.body.getElementsByClassName("modal");
+        if (layoverElement.length > 0) {
+            layoverElement[0].remove();
+            let correlatiElem = $('#correlati');
+            if (correlatiElem.length > 0) {
+                correlatiElem[0].style.display = "none";
+            }
         } else {
-            setTimeout(unlockArticle, 100);
+            let paywallStripe = $('#paywall_strip');
+            if (paywallStripe.length > 0) {
+                paywallStripe[0].remove();
+            } else {
+                unlockArticle();
+            }
         }
-    }
+    }, 100);
 }
 
 function closeVideoPopUp () {
