@@ -2,10 +2,24 @@ setTimeout(function () {
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", unlockArticle);
     } else {
+        removePaywall();
         unlockArticle();
         closeVideoPopUp();
     }
 }, 100);
+
+function removePaywall () {
+    setTimeout(function () {
+        document.body.style.overflow = "scroll";
+        let paywallElement = $('#datawall');
+        if (paywallElement.length > 0) {
+            paywallElement[0].remove();
+        } else {
+            removePaywall();
+        }
+    }, 100);
+    window.scrollTo(0, 0);
+}
 
 function unlockArticle () {
     setTimeout(function () {
