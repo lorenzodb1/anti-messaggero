@@ -35,6 +35,8 @@ Version 1.1.0
 Version 1.1.1
 - Fixed issue on mobile caused by a strange behaviour of the website that affected readability of the article.
 
-
 Version 1.2.0
 - Added functionality to remove the paywall that was recently added.
+
+Version 1.2.1
+- Fixed bug related to scrolling.

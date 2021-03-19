@@ -14,11 +14,11 @@ function removePaywall () {
         let paywallElement = $('#datawall');
         if (paywallElement.length > 0) {
             paywallElement[0].remove();
+            window.scrollTo(0, 0);
         } else {
             removePaywall();
         }
     }, 100);
-    window.scrollTo(0, 0);
 }
 
 function unlockArticle () {
