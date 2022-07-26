@@ -44,3 +44,7 @@ Version 1.2.1
 Version 1.3.0
 - Added functionality to remove blur filter from article;
 - Remove ads within article and reduce the excessive space it occupies.
+
+Version 1.3.1
+- Removed unnecessary timeout-based loop;
+- Removed forgotten console log printers.

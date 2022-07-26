@@ -60,17 +60,10 @@ function removeBlurFilter () {
 }
 
 function removeExcessSpacing () {
-    setTimeout(function () {
-        let elems = document.body.getElementsByClassName("inread_adv");
-        console.log("prima: "+elems.length)
-        if (elems.length > 0) {
-            for (let elem of elems) {
-                elem.parentNode.removeChild(elem)
-            }
-        console.log("dopo: "+elems.length)
-        } else {
-            console.log("ripeti")
-            removeExcessSpacing()
+    let elems = document.body.getElementsByClassName("inread_adv");
+    if (elems.length > 0) {
+        for (let elem of elems) {
+            elem.parentNode.removeChild(elem)
         }
-    }, 100);
+    }
 }
