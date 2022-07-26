@@ -40,3 +40,7 @@ Version 1.2.0
 
 Version 1.2.1
 - Fixed bug related to scrolling.
+
+Version 1.3.0
+- Added functionality to remove blur filter from article;
+- Remove ads within article and reduce the excessive space it occupies.

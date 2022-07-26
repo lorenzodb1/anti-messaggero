@@ -5,6 +5,8 @@ setTimeout(function () {
         removePaywall();
         unlockArticle();
         closeVideoPopUp();
+        removeBlurFilter();
+        removeExcessSpacing()
     }
 }, 100);
 
@@ -49,6 +51,26 @@ function closeVideoPopUp () {
             popUpVideo[0].click();
         } else {
             closeVideoPopUp()
+        }
+    }, 100);
+}
+
+function removeBlurFilter () {
+    $('.wrapper .contenuto .body-text > :not(.adv_banner)').css("filter", "unset")
+}
+
+function removeExcessSpacing () {
+    setTimeout(function () {
+        let elems = document.body.getElementsByClassName("inread_adv");
+        console.log("prima: "+elems.length)
+        if (elems.length > 0) {
+            for (let elem of elems) {
+                elem.parentNode.removeChild(elem)
+            }
+        console.log("dopo: "+elems.length)
+        } else {
+            console.log("ripeti")
+            removeExcessSpacing()
         }
     }, 100);
 }
