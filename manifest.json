@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Anti-Messaggero",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Automatically remove the paywall that blocks a user from reading an article and the pop-up containing the video attached to it.",
   "homepage_url": "https://github.com/lorenzodb1/anti-messaggero",
   "icons": {

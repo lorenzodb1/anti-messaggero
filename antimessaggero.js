@@ -1,14 +1,19 @@
 setTimeout(function () {
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", unlockArticle);
+        document.addEventListener("DOMContentLoaded", main);
     } else {
-        removePaywall();
-        unlockArticle();
-        closeVideoPopUp();
-        removeBlurFilter();
-        removeExcessSpacing()
+        main()
     }
 }, 100);
+
+function main () {
+    removePaywall();
+    unlockArticle();
+    closeVideoPopUp();
+    removeBlurFilter();
+    removeExcessSpacing();
+    uncoverBodyText();
+}
 
 function removePaywall () {
     setTimeout(function () {
@@ -66,4 +71,15 @@ function removeExcessSpacing () {
             elem.parentNode.removeChild(elem)
         }
     }
+}
+
+function uncoverBodyText () {
+    let elem = document.body.getElementsByClassName("body-text")[0];
+    setTimeout(function () {
+        if (elem.style.length === 3) {
+            elem.style = null
+        } else {
+            uncoverBodyText();
+        }
+    }, 100);
 }

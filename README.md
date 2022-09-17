@@ -48,3 +48,6 @@ Version 1.3.0
 Version 1.3.1
 - Removed unnecessary timeout-based loop;
 - Removed forgotten console log printers.
+
+Version 1.4.0
+- Added functionality to uncover article when a paywall should be shown.
