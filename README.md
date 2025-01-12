@@ -51,3 +51,7 @@ Version 1.3.1
 
 Version 1.4.0
 - Added functionality to uncover article when a paywall should be shown.
+
+Version 1.5.0
+- Remove the promo bar at the bottom of free articles.
+- Remove the dark background added to the paywall.

@@ -13,6 +13,7 @@ function main () {
     removeBlurFilter();
     removeExcessSpacing();
     uncoverBodyText();
+    removeStickyPromo();
 }
 
 function removePaywall () {
@@ -42,6 +43,13 @@ function unlockArticle () {
             let paywallStripe = $('#paywall_strip');
             if (paywallStripe.length > 0) {
                 paywallStripe[0].remove();
+            }
+            else {
+                unlockArticle();
+            }
+            let paywallWrapper = $('#paywall_wrapper');
+            if (paywallWrapper.length > 0) {
+                paywallWrapper[0].remove();
             } else {
                 unlockArticle();
             }
@@ -80,6 +88,17 @@ function uncoverBodyText () {
             elem.style = null
         } else {
             uncoverBodyText();
+        }
+    }, 100);
+}
+
+function removeStickyPromo () {
+    let stickyPromo = $('#mp_strip_sticky');
+    setTimeout(function () {
+        if (stickyPromo.length > 0) {
+            stickyPromo[0].remove();
+        } else {
+            removeStickyPromo();
         }
     }, 100);
 }
